@@ -26,6 +26,24 @@ Cette tâche est la plus complète et requiert la **détection des mots, leur re
 ### Sur quelle(s) tâche(s) travaillons nous ? 
 
 ## Les méthodes mises en place l'année passée
+### Tâche 1
+#### MaskDINO
+Mask DINO est une extension de DINO qui unifie la détection d'objets et la segmentation d'images (instance, panoptique et sémantique) en ajoutant une branche de prédiction de masque. Il utilise les plongements de requêtes de DINO pour prédire des masques binaires à partir d'une carte de plongement de pixels haute résolution
+
+Avantages :
+
+- Unification des tâches de détection et de segmentation
+- Performances de pointe en segmentation instance, panoptique et sémantique parmi les modèles de moins d'un milliard de paramètres
+- Simple, efficace et extensible, bénéficiant de données de détection et de segmentation à grande échelle
+- Coopération entre la détection et la segmentation, où chaque tâche s'améliore mutuellement
+
+Inconvénients :
+
+- Performance de segmentation panoptique (Mask AP) inférieure aux modèles spécialisés en segmentation d'instance
+- Performance de détection à grande échelle non optimale en raison des limitations de mémoire GPU
+- Besoins en mémoire GPU accrus (8 GPU (???) pour l'entraînement)
+- Coopération limitée entre les différentes tâches de segmentation dans la segmentation panoptique sur COCO
+
 
 ## Méthode qu'on veut mettre en place
 
