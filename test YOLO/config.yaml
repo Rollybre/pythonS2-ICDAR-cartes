@@ -1,0 +1,4 @@
+train : /Users/rolly/Documents/10-19_Université_et_scolarité/python_s2/projet/data/split/train
+val : //Users/rolly/Documents/10-19_Université_et_scolarité/python_s2/projet/data/split/val
+nc : 1
+names : ['img']
